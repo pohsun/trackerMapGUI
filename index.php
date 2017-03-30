@@ -35,23 +35,32 @@
                 document.getElementById('refPath').value = '../'+dataTypeS+runTypeS+runNumberS.substr(0,3)+'/'+runNumberS+dataSetS;
                 return true;
             }
+
 	    function goNextRun(){
 		var runNumberE = document.getElementById('runNumber').runNumberSel;
 		if (runNumberE.selectedIndex+1 < runNumberE.length){
 		    runNumberE.selectedIndex = runNumberE.selectedIndex+1;
 		    updateVar('runNumber',runNumberE.options[runNumberE.selectedIndex-1].text);
 		}else{
-		    alert("It's last run!");
+		    alert("It's the last run!");
 		}
 	    }
+
 	    function goPrevRun(){
 		var runNumberE = document.getElementById('runNumber').runNumberSel;
 		if (runNumberE.selectedIndex-1 >= 0){
 		    runNumberE.selectedIndex = runNumberE.selectedIndex-1;
 		    updateVar('runNumber',runNumberE.options[runNumberE.selectedIndex+1].text);
 		}else{
-		    alert("It's first run!");
+		    alert("It's the first run!");
 		}
+	    }
+	    
+	    function setWindowSize(){
+		// http://stackoverflow.com/questions/1297449/change-image-size-with-javascript
+	    }
+
+	    function saveCache(tag){
 	    }
 	
 	    function ringAlert(){
@@ -61,38 +70,15 @@
 	    function ready(){
 	    }
 
-	    function setWindowSize(){
-	    }
         </script>
     </head>
     <?php
         include("trackerMap.php");
     ?>
     <body>
-        <h1 id="top"> CMS TrackerMap GUI </h1>
-	<a href="#mapSelect">Select maps to be checked</a><br>
-	
-        <p>
-        <?php setDataType(); ?>
-        <?php setRunType();  ?>
-        <?php setRunNumber(); ?>
-        <?php setDataSet(); ?>
-        <?php setRefPath(); ?>
-        </p>
-        
-        <p>
-	<?php //goNeighborRun(); ?>
-        <?php plotWantedMaps(); ?>
-        </p>
-        
-	<h1 id="mapSelect"></h1>
-	<?php setWantedMaps(); ?>
-	<br><a href="#top">Go To Top</a><br>
-	
-	<!--
-	<button onclick="ringAlert()">Next</button>
-	-->
-	
+	<?php
+	    main();
+    	?>
     </body>
 </html>
 
