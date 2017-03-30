@@ -22,6 +22,7 @@ Save/Load
 ---------
 
 .. image:: https://github.com/pohsun/trackerMapGUI/blob/master/img/README_SaveLoad.png
+  :width: 40px
 
 This function is designed to save/load the setting and generated page.
 
@@ -42,6 +43,7 @@ Map Selector
 ------------
 
 .. image:: https://github.com/pohsun/trackerMapGUI/blob/master/img/README_MapSelector.png
+  :width: 40px
 
 Check the checkboxes for your favored map and hit **Update list of wanted maps**.
 
@@ -51,6 +53,7 @@ RunData Selector
 ----------------
 
 .. image:: https://github.com/pohsun/trackerMapGUI/blob/master/img/README_EventDataSelector.png
+  :width: 40px
 
 Select an event/dataset to be checked.
 
@@ -66,6 +69,7 @@ Now you get the maps
 --------------------
 
 .. image:: https://github.com/pohsun/trackerMapGUI/blob/master/img/README_ExampleMaps.png
+  :width: 40px
 
 A tool line is provided to jump between runs and datasets.
 
